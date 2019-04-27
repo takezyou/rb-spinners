@@ -1,6 +1,6 @@
 require 'tty-cursor'
 
-require './spinner'
+require 'spinner'
 
 CURSOR = "\e[1A"
 CLEAR_LINE = "\033[K"
