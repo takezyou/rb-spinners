@@ -2,10 +2,14 @@ require 'tty-cursor'
 
 require './spinner'
 
+CURSOR = "\e[1A"
+CLEAR_LINE = "\033[K"
+
 def animate(name, interval, frames)
   frames.each do |frame|
+    printf CLEAR_LINE
     puts printf('%s %s', frame, name)
-    printf "\e[1A"
+    printf CURSOR
     STDOUT.flush
     sleep 0.001 * interval
   end
