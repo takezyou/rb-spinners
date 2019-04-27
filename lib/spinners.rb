@@ -1,4 +1,4 @@
-require "spinner/version"
+require "spinners/version"
 
 module Spinners
   DOTS = {

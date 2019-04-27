@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "spinner/version"
+require "spinners/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "spinner"
-  spec.version       = Spinner::VERSION
+  spec.name          = "spinners"
+  spec.version       = Spinners::VERSION
   spec.authors       = ["KaitoAkita"]
   spec.email         = ["kaitokun07@icloud.com"]
 
