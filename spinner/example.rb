@@ -2,22 +2,28 @@ require 'tty-cursor'
 
 require './spinner'
 
+def animate(name, interval, frames)
+  frames.each do |frame|
+    puts printf('%s %s', frame, name)
+    printf "\e[1A"
+    STDOUT.flush
+    sleep 0.001 * interval
+  end
+end
+
 cursor = TTY::Cursor
-spinner = Spinners::SquareCorners
-
-# puts spinner
-key = spinner.keys[0]
-
-# puts spinner.dig(key, :interval)
-# puts spinner.dig(key, :frames)
-interval = spinner.dig(key, :interval)
-frames = spinner.dig(key, :frames)
 
 STDOUT.write(cursor.hide)
-frames.each do |frame|
-  puts printf('%s %s', frame, key)
-  printf "\e[1A"
-  STDOUT.flush
-  sleep 0.001 * interval
+spinners = Spinners.constants.sort.map do |spinner|
+  Spinners.const_get(spinner)
 end
+
+spinners.each do |spinner|
+  name = spinner.keys[0]
+  interval = spinner.dig(name, :interval)
+  frames = spinner.dig(name, :frames)
+  animate(name, interval, frames)
+end
+
+printf "\n"
 STDOUT.write(cursor.show)
