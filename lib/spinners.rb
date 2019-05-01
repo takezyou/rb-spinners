@@ -1,5 +1,3 @@
-require "spinners/version"
-
 module Spinners
   DOTS = {
             dots: {

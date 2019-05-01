@@ -16,7 +16,6 @@ def animate(name, interval, frames)
 end
 
 cursor = TTY::Cursor
-
 STDOUT.write(cursor.hide)
 spinners = Spinners.constants.sort.map do |spinner|
   Spinners.const_get(spinner)
