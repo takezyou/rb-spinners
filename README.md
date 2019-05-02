@@ -1,4 +1,5 @@
 # rb-spinners
+[![Gem Version](https://badge.fury.io/rb/rb-spinners.svg)](https://badge.fury.io/rb/rb-spinners)
 [![Build Status](https://travis-ci.org/takezyou/rb-spinners.svg?branch=master)](https://travis-ci.org/takezyou/rb-spinners)
 [![Coverage Status](https://coveralls.io/repos/github/takezyou/rb-spinner/badge.svg?branch=master)](https://coveralls.io/github/takezyou/rb-spinner?branch=master)
 
