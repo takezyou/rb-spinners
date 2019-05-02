@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "spinners/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "spinners"
+  spec.name          = "rb-spinners"
   spec.version       = Spinners::VERSION
   spec.authors       = ["KaitoAkita"]
   spec.email         = ["kaitokun07@icloud.com"]
